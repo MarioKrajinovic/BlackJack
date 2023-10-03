@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="index.css">
+    <title>Blackjack</title>
+</head>
+<body>
+    <div id="start-game" class="animate__animated animate__bounce">
+        <h1>WELCOME TO BLACKJACK!</h1>
+        <img src="image-start.png" alt="Cards">
+        <button onclick="startGame()">START GAME</button>
+    </div>
+    <div id="stakes" class="animate__animated animate__fadeIn">
+        <h1>Place Your Bet</h1>
+        <div class="chips">
+            <div>
+                <button class="chip one" onclick="bet(1)"><img src="chips/one.png" alt=""></button>
+                <button class="chip five" onclick="bet(5)"><img src="chips/five.png" alt=""></button>
+                <button class="chip ten" onclick="bet(10)"><img src="chips/ten.png" alt=""></button>
+                <button class="chip twenty-five" onclick="bet(25)"><img src="chips/twenty-five.png" alt=""></button>
+            </div>
+            <div>
+                <button class="chip fifty" onclick="bet(50)"><img src="chips/fifty.png" alt=""></button>  
+                <button class="chip one-hundred" onclick="bet(100)"><img src="chips/one-hundred.png" alt=""></button>    
+                <button class="chip five-hundred" onclick="bet(500)"><img src="chips/five-hundred.png" alt=""></button>    
+                <button class="chip one-thousand" onclick="bet(1000)"><img src="chips/one-thousand.png" alt=""></button>  
+            </div>
+        </div>
+        <div id="stake">0€</div>
+        <button class="bet-button" onclick="dealCards()">Done</button>
+    </div>
+    <div id="play-game">
+        <div><span id="my-chips"></span></div>
+        <div id="deck"><img src="cards/Field.png" alt="Deck of cards"></div>
+        <div class="rival-cards">
+            <div id="rival-cards"></div>
+            <div id="rival-sum"></div>
+        </div>
+        <div id="table"></div>
+        <div class="my-cards">
+            <p id="message"></p>
+            <div class="buttons">
+                <button onclick="newCard()">+</button>
+                <button onclick="endGame()">✓</button>
+                <button id="new-game" onclick="newGame()">NG</button>
+            </div>
+            <div id="cards"></div>
+            <span id="sum"></span>
+        </div>
+    </div>
+    <script src="functions/startGame.js"></script>
+    <script src="functions/stakes.js"></script>
+    <script src="functions/dealCards.js"></script>
+    <script src="functions/renderGame.js"></script>
+    <script src="functions/newCard.js"></script>
+    <script src="functions/endGame.js"></script>
+    <script src="functions/newGame.js"></script>
+    <script src="cards.js"></script>
+</body>
+</html>
